@@ -11,7 +11,7 @@
     "content_scripts": [
         {
             "matches": ["https://huggingface.co/*"],
-            "js": ["content.js"]
+            "js": ["fastcore.js", "content.js"]
         }
     ]
 }
