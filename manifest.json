@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "HF Model Size",
+    "version": "1.0",
+    "description": "Calculate the aggregate size of a Hugging Face model repo",
+    "content_scripts": [
+        {
+            "matches": ["https://huggingface.co/*"],
+            "js": ["content.js"]
+        }
+    ]
+}
