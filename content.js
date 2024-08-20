@@ -1,5 +1,5 @@
-function $ (sel) {return document.querySelector   (sel)}
-function $$(sel) {return document.querySelectorAll(sel)}
+function $ (sel, root = document) {return root.querySelector(sel)}
+function $$(sel, root = document) {return root.querySelectorAll(sel)}
 function $H(ss, ...values) {
     const r = document.createElement('div');
     r.innerHTML = ss.reduce((r,s,i) => r+s + (values[i] || ''), '').trim();
@@ -30,7 +30,7 @@ function insertSizeIntoDOM(size) {
     const targetElement = $('.relative.mb-2.flex.flex-wrap.items-center');
   
     if (targetElement) {
-      const existingSizeElement = targetElement.querySelector('.repo-size');
+      const existingSizeElement = $('.repo-size', targetElement);
       if (existingSizeElement) existingSizeElement.remove();
       let sizeElement = $H`<span class="ml-2 text-sm text-gray-500 repo-size">(${size})</span>`;
 
