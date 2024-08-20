@@ -3,6 +3,11 @@
     "name": "HF Model Size",
     "version": "1.0",
     "description": "Calculate the aggregate size of a Hugging Face model repo",
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
     "content_scripts": [
         {
             "matches": ["https://huggingface.co/*"],
